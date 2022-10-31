@@ -18,6 +18,9 @@ public class Spotruchy {
 
     @OneToMany(mappedBy = "spotruchy")
     private Set<Album> albumes;
+
+    @ManyToMany(mappedBy = "spotruchy")
+    private Set<Discografica> discografica;
     
     static {
         persistencia = new Persistencia();
